@@ -37,4 +37,4 @@ This project involves scraping second-hand housing data from the Lianjia website
 The correlation heatmap shows the relationship between features. <img src="plots/correlation_heatmap.png" alt="Correlation Heatmap" width="400">
 
 ### Price Heatmap based on Longitude and Latitude
-House prices tend to rise closer to the city center. <img src="plots/price_heatmap.png" alt="Price Heatmap" width="400">
+ <img src="plots/price_heatmap.png" alt="Price Heatmap" width="400">
