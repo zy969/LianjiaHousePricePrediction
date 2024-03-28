@@ -22,12 +22,6 @@ This project involves scraping second-hand housing data from the Lianjia website
 
 ## Results
 
-### Correlation Heatmap
-The correlation heatmap shows the relationship between features. While some connections exist, overall correlation is weak. ![Correlation Heatmap](plots/correlation_heatmap.png)
-
-### Price Heatmap based on Longitude and Latitude
-House prices tend to rise closer to the city center. ![Price Heatmap](plots/price_heatmap.png)
-
 ### Model Performance
 | Model Name        | Linear Regression | Stacking  | Random Forest | XGBoost | SVR    |
 |-------------------|-------------------|-----------|---------------|---------|--------|
@@ -37,4 +31,10 @@ House prices tend to rise closer to the city center. ![Price Heatmap](plots/pric
 | R-squared         | 0.5340            | 0.8874    | 0.8821        | 0.7494  | 0.8918 |
 
 ### Scatter Plots
- ![Scatter Plots](plots/scatter_plots.png)
+<img src="plots/scatter_plots.png" alt="Scatter Plots" width="400">
+
+### Correlation Heatmap
+The correlation heatmap shows the relationship between features. <img src="plots/correlation_heatmap.png" alt="Correlation Heatmap" width="400">
+
+### Price Heatmap based on Longitude and Latitude
+House prices tend to rise closer to the city center. <img src="plots/price_heatmap.png" alt="Price Heatmap" width="400">
