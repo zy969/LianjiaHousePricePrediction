@@ -3,6 +3,21 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Ignore .metals folder
+/.metals
+.metals/metals.lock.db
+
+# Ignore .vscode folder
+/.vscode
+.metals/metals.lock.db
+
+# Ignore .idea folder
+/.idea
+.idea/libraries/streamdq_1_0_SNAPSHOT.xml
+
+# macOS .DS_Store files
+.DS_Store
+
 # C extensions
 *.so
 
