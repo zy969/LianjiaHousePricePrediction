@@ -59,5 +59,5 @@ The correlation heatmap shows the relationship between features. <img src="plots
 ### Price Heatmap based on Longitude and Latitude
  <img src="plots/price_heatmap.png" alt="Price Heatmap" width="400">
 
-#### Example PDP and ICE Plots
+### Example PDP and ICE Plots
 ![PDP and ICE Plots](plots/ice.jpg)
