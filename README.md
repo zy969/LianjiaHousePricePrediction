@@ -1,12 +1,12 @@
 # Shanghai Second-hand House Price Prediction
 
 ## Overview
-This project involves scraping second-hand housing data from the [Lianjia website](https://sh.lianjia.com/) for the city of Shanghai and predicting housing prices using machine learning models. It integrates web scraping, data processing, feature engineering, and predictive modeling techniques to provide insights into the real estate market trends in Shanghai.
+This project involves scraping second-hand housing data from [Lianjia](https://sh.lianjia.com/) for the city of Shanghai and predicting housing prices using machine learning models. It integrates web scraping, data processing, feature engineering, and predictive modeling techniques to provide insights into the real estate market trends in Shanghai.
 
 ### Key Methods
 
 - **Web Scraping**: 
-  - Scraped housing data from the [Lianjia website](https://sh.lianjia.com/) using `requests`, `lxml`, and `re`, and stored it in CSV format.
+  - Scraped housing data from [Lianjia](https://sh.lianjia.com/) using `requests`, `lxml`, and `re`, and stored it in CSV format.
   
 - **Data Processing**: 
   - Processed the scraped data and integrated macroeconomic data using `pandas` for feature engineering.
