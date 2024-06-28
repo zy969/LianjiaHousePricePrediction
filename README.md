@@ -14,27 +14,31 @@ This project involves scraping second-hand housing data from the [Lianjia websit
 - **Machine Learning Modeling**: 
   - Implemented machine learning models including Linear Regression, Stacking, Random Forest, XGBoost, and SVR using `scikit-learn`.
   
-- **Evaluation**: 
-  - Evaluated model performance using metrics such as Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and R-squared. 
-  - Visualization using `matplotlib`.
+- **Evaluation and Visualization**: 
+  - Evaluated model performance using metrics such as Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and R-squared.
+  - Used `matplotlib` for visualization.
+  - Generated Partial Dependence Plots (PDP) and Individual Conditional Expectation (ICE) plots using `sklearn`'s `partial_dependence` and `plot_partial_dependence` to examine relationships between house prices and housing attributes.
+
 
 ## Implementation
 
 ### Crawler
 - **File**: [`crawler.py`](https://github.com/zy969/LianjiaHousePricePrediction/blob/main/crawler/crawler.py)
-- **Description**: This script serves the purpose of scraping second-hand housing data from the Lianjia website. It extracts essential information such as house title, price, type, floor, area, structure, orientation, building type, renovation condition, and geographical coordinates. Additionally, it utilizes the [Baidu Map API](https://lbsyun.baidu.com/) to fetch nearby amenities' data, including public transportation stations, medical facilities, entertainment venues, educational institutions, and lifestyle establishments. The collected data is then stored in a CSV file for further analysis and machine learning model training.
+- **Description**: Scrapes second-hand housing data from Lianjia, extracting house title, price, type, floor, area, structure, orientation, building type, renovation condition, and geographical coordinates. Uses [Baidu Map API](https://lbsyun.baidu.com/) to fetch data on nearby amenities (public transport, medical, entertainment, education, lifestyle). Stores collected data in CSV for analysis and model training.
+
 
 ### Data Processing and Feature Engineering
 - **File**: [`add_macro_variables.py`](https://github.com/zy969/LianjiaHousePricePrediction/blob/main/processor/add_macro_variables.py)
-- **Description**: This script integrates macroeconomic data with transactional information. It reads monthly average house prices, consumer price index, and other macro indicators from an Excel file. Then, it imports transactional data from the previously crawled CSV file. Subsequently, it matches the transactional data with corresponding macroeconomic indicators based on time and region. Finally, the script combines the matched data into a DataFrame and exports the result to a new CSV file.
+- **Description**: Integrates macroeconomic data (house prices, CPI, etc.) with transactional data from the crawled CSV. Matches data based on time and region, combines into a DataFrame, and exports to a new CSV.
+
 
 - **File**: [`data_processing.py`](https://github.com/zy969/LianjiaHousePricePrediction/blob/main/processor/data_processing.py)
-- **Description**: This script initially loads the raw data and then parses housing information. Subsequently, it integrates various amenities information such as transportation facilities, education, dining, medical services, fitness, shopping, finance, and entertainment. Following this, the script creates new columns to represent the integrated information of these amenities and selects a set of key columns including region, price, square footage, interior structure, building type, and more. Afterwards, it excludes specific values from the data, such as "N/A" or "Not applicable", and performs value replacements for encoding purposes on certain columns. Lastly, the script handles exceptional values, normalizes selected columns, and ultimately saves the processed data into a new CSV file.
+- **Description**: Loads raw data, parses housing info, integrates amenities data (transport, education, dining, medical, fitness, shopping, finance, entertainment). Creates columns for integrated amenities info, selects key columns (region, price, square footage, etc.). Excludes "N/A" values, encodes columns, handles exceptional values, normalizes selected columns, and saves processed data into a new CSV.
+
 
 ### Evaluation
 - **File**: [`evaluation.py`](https://github.com/zy969/LianjiaHousePricePrediction/blob/main/evaluation/evaluation.py)
-- **Description**: This script contains portions of code for data visualization, machine learning model training, prediction, and evaluation. It serves the purpose of assessing the performance of different models and visualizing important trends and relationships in the data.
-
+- **Description**: Contains code for data visualization, model training, prediction, and evaluation. Assesses model performance and visualizes trends and relationships in the data.
 
 ## Results
 
@@ -54,3 +58,6 @@ The correlation heatmap shows the relationship between features. <img src="plots
 
 ### Price Heatmap based on Longitude and Latitude
  <img src="plots/price_heatmap.png" alt="Price Heatmap" width="400">
+
+#### Example PDP and ICE Plots
+![PDP and ICE Plots](plots/ice.jpg)
